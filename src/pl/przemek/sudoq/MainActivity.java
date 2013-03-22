@@ -12,15 +12,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.analytics.tracking.android.EasyTracker;
-//import com.google.analytics.tracking.android.GoogleAnalytics;
-//import com.google.analytics.tracking.android.Tracker;
 
 public class MainActivity extends Activity {
 	public final static String EXTRA_MESSAGE = "pl.przemek.sudoq.MESSAGE";
 	private String difficulty;
-	
-	//private Tracker myTracker;
-	//private GoogleAnalytics myAnalytics;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +23,6 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		SharedPreferences settings = getPreferences(MODE_PRIVATE);
 		this.difficulty = settings.getString("difficulty", "easy");
-		/*Button button = (Button) findViewById(R.id.button1);
-		button.setEnabled(true);
-		try {
-			openFileInput("savedSudoq");
-		} catch (FileNotFoundException e) {
-			button.setEnabled(false);
-		}*/
-		//myAnalytics = GoogleAnalytics.getInstance(this);
-		//myTracker = myAnalytics.getTracker("UA-38473230-1");
 	}
 	
 	@Override
@@ -62,7 +48,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		if (this.difficulty.equals("easy")){
 			menu.findItem(R.id.easy).setChecked(true); 
