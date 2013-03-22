@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SudoQ</string>
+    <string name="menu_settings">Poziom Trudności</string>
+    <string name="main_continue">Kontynuuj</string>
+    <string name="main_new">Nowa Gra</string>
+    <string name="main_about">Informacje</string>
+    <string name="main_continue_description">Kontynuuje grę rozpoczętą wcześniej</string>
+    <string name="title_activity_about">Informacje</string>
+    <string name="about_title">Wykonane przez:</string>
+    <string name="about_content">Przemysław Burczyk</string>
+    <string name="about_button">Strona domowa</string>
+    <string name="title_activity_sudoq">Sudoq</string>
+    <string name="main_difficulty_easy">Łatwy</string>
+    <string name="main_difficulty_medium">Średni</string>
+    <string name="main_difficulty_hard">Trudny</string>
+
+</resources>
