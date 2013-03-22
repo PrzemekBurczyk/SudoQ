@@ -70,37 +70,24 @@ public class SudoqView extends View {
 	
 	@Override
 	protected void onDraw(Canvas canvas) {
-		// Draw the background
-		
-  		//canvas.drawRect(0, 0, getWidth(), getHeight(), background);
 		canvas.drawRect(0, 0, getWidth(), getWidth(), background);
-  		// Draw the board
-  
-  		// Draw the minor grid lines
   		for (int i = 0; i < sudoqActivity.getSize(); i++) {
   			canvas.drawLine(0, i * width, getWidth(), i * width, light);
   			canvas.drawLine(i * width, 0, i * width, getWidth(), light);
   		}
-  		
-  		// Draw the major grid lines
   		for (int i = 0; i < sudoqActivity.getSize(); i++) {
   			if (i % Math.sqrt(sudoqActivity.getSize()) != 0)
   				continue;
   			canvas.drawLine(0, i * width, getWidth(), i * width, dark);
-  			canvas.drawLine(0, i * width - 1, getWidth(), i * width - 1, dark);			//bold horizontal
+  			canvas.drawLine(0, i * width - 1, getWidth(), i * width - 1, dark);		//bold horizontal
 		    canvas.drawLine(i * width, 0, i * width, getWidth(), dark);
 		    canvas.drawLine(i * width - 1, 0, i * width - 1, getWidth(), dark);			//bold vertical
   		}
   		canvas.drawLine(0, sudoqActivity.getSize() * width, getWidth(), sudoqActivity.getSize() * width, dark);  //border on bottom
-  		// Draw the numbers
-  
-  		// Define color and style for numbers
   		foreground.setColor(getResources().getColor(R.color.black));
   		foreground.setStyle(Style.FILL);
   		foreground.setTextSize(width * 0.75f);
   		foreground.setTextAlign(Paint.Align.CENTER);
-
-  		// Draw the number in the center of the tile
   		FontMetrics fm = foreground.getFontMetrics();
   		// Centering in X: use alignment (and X at midpoint)
   		float x = width / 2;
